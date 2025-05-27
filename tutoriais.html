@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoriais - GuaraOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GuaraOS</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="tutoriais.html">Tutoriais</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Como instalar o GuaraOS</h2>
+
+      <h3>🖥️ No VirtualBox</h3>
+      <ol>
+        <li>Baixe o arquivo .ISO do GuaraOS na aba de Downloads.</li>
+        <li>Abra o VirtualBox e crie uma nova máquina virtual (Linux > Ubuntu 64-bit).</li>
+        <li>Configure memória (mínimo 1024MB) e disco (10GB+).</li>
+        <li>Monte a ISO no menu "Armazenamento" > "Adicionar imagem de CD".</li>
+        <li>Inicie a máquina e siga o instalador.</li>
+      </ol>
+
+      <h3>📱 No Limbo PC Emulator (Android)</h3>
+      <ol>
+        <li>Baixe a ISO e transfira para seu celular.</li>
+        <li>Abra o Limbo PC Emulator.</li>
+        <li>Crie nova VM, selecione a ISO do GuaraOS.</li>
+        <li>CPU: x86, RAM: 512MB+, Disco: 4GB+, Boot ISO.</li>
+        <li>Inicie e instale normalmente.</li>
+      </ol>
+
+      <h3>🐧 No QEMU</h3>
+      <pre>qemu-system-x86_64 -cdrom GuaraOS.iso -boot d -m 1024 -enable-kvm</pre>
+    </section>
+  </main>
